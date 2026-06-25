@@ -1,0 +1,1355 @@
+Reading Guide - Graduation Project
+
+Designing a User‑Friendly Template System for Campaign Landing Pages in Delta’s Custom CMS
+
+
+
+1. Background
+
+1.1 Project summary
+
+In this graduation project I work with the digital and marketing teams at Delta Electronics EMEA to improve the way campaign landing pages are created and maintained in the company’s custom CMS. At the moment, many landing pages are still set up on a case‑by‑case basis, with manual adjustments and one‑off solutions by the front‑end and digital team. This leads to differences in structure and quality between campaigns and makes marketers dependent on developers for relatively small changes.
+
+For many marketers, the current templates and configuration screens do not feel intuitive or self‑service. They often struggle to translate their campaign ideas into consistent pages without asking for technical help. Because the pain points and constraints around template reuse and configuration have not yet been mapped in a structured way, Delta does not have a user‑friendly template system that allows marketing teams to assemble campaign landing pages from reusable building blocks in a predictable way.
+
+In this project I design, implement and evaluate a template system within the existing CMS that is easier for marketers to configure and that helps create consistent, well‑structured campaign landing pages using reusable components. The work combines UX research, design thinking and front‑end implementation.
+
+1.2 Problem statement
+
+Marketing teams at Delta EMEA frequently experience difficulties when they create campaign landing pages without direct support from developers. Existing templates and configuration options are not always clear or flexible enough, which results in ad‑hoc solutions, extra implementation effort and pages that differ in structure and quality.
+
+A more user‑friendly template system is needed: one that offers reusable components, clearer configuration flows and better support for marketers, while remaining maintainable for the digital/front‑end team.
+
+1.3 How the project is organised
+
+I describe this project using a Design Thinking process with six steps: Empathize, Define, Ideate, Prototype, Test and Implement. Each step combines HBO‑ICT research methods with concrete design and implementation work in the CMS.
+
+
+
+
+
+Empathize – Understand how campaign landing pages are currently created in the CMS and what problems marketers and developers encounter.
+
+
+
+Define – Translate these findings into clear goals, constraints and requirements for a template system.
+
+
+
+Ideate – Explore and compare concepts for templates, components, configuration flows and potential AI support.
+
+
+
+Prototype – Design and build a first working version of the template system in the CMS.
+
+
+
+Test – Evaluate the new system and, where possible, an AI concept with stakeholders through tasks, feedback and before/after comparisons.
+
+
+
+Implement – Refine and complete the template system in the CMS based on usability‑testing feedback, and deliver a final, documented version that is ready for use in real campaigns.
+
+The project runs over approximately twenty weeks. I use a Kanban board (To Do / In Progress / Done) for day‑to‑day planning and for alignment with my company mentor, the front‑end developer and my Fontys coach. Testing and quality checks for layout, responsiveness, accessibility and maintainability are integrated into the implementation work rather than treated as a separate phase.
+
+Project Plan: @Project Plan - S8
+
+OneDrive link: Graduation Project - Delta Electronics
+
+Delta Template System: Delta Template System - Username: DeltaEMEA / Password: Mrkt2026
+
+
+
+2. Research
+
+2.1 Research objective
+
+The main research objective is:
+
+
+
+To design and evaluate a user‑friendly template system in Delta’s custom CMS that better supports marketing teams in creating consistent, well‑structured campaign landing pages with less developer support.
+
+2.2 Main research question
+
+This leads to the following main research question:
+
+
+
+How can a user‑friendly template system in Delta’s custom CMS be designed to better support marketing teams in creating consistent, well‑structured campaign landing pages?
+
+2.3 Sub‑research questions and methods
+
+The main research question is divided into six sub‑questions. Each sub‑question is answered using appropriate HBO‑ICT research methods and is linked to one or more Design Thinking phases.
+
+SQ1 - Current situation and issues
+
+
+
+
+
+Question: How are campaign landing pages currently created and configured in Delta’s custom CMS, and what difficulties do marketing teams and developers experience with the existing templates and tools?
+
+
+
+Goal: Build an evidence‑based picture of the current process, tools and pain points.
+
+
+
+Methods: Case studies of five March/April landing pages (process mapping and artefact analysis), semi‑structured stakeholder interviews and limited observation/shadowing.
+
+SQ2 - Goals, constraints and requirements for a template system
+
+
+
+
+
+Question: What goals, constraints and requirements do stakeholders have for a template system that should be user‑friendly for marketing teams and support consistent, well‑structured campaign landing pages?
+
+
+
+Goal: Translate the findings from SQ1 into concrete functional, UX and technical requirements.
+
+
+
+Methods: Requirements analysis and heuristic/competitive review of template builders and landing‑page guidelines.
+
+SQ3 - Concept and design of the template system
+
+
+
+
+
+Question: Which template and component concepts are feasible within the existing CMS, and what design for a user‑friendly template system best fits the identified requirements?
+
+
+
+Goal: Develop and justify a concrete concept that covers templates, components and configuration flows.
+
+
+
+Methods: Concept design and prototyping, comparison matrix, co‑design workshop and decision rationale.
+
+SQ4 - Implementation and refinement in the CMS
+
+
+
+
+
+Question: How can the chosen template system be implemented in Delta’s custom CMS and iteratively refined into a stable, reusable product based on stakeholder and usability‑testing feedback?
+
+
+
+Goal: Realise a robust implementation of the template system and bring it to a version that is ready for use across multiple campaigns.
+
+
+
+Methods: Implementation log, design‑artefact documentation (for example component specifications and configuration flows) and a documented change log that shows how the system evolved after testing.
+
+SQ5 - Impact on ease of use and page consistency
+
+
+
+
+
+Question: To what extent does the new template system improve marketing teams’ perceived ease of use and the consistency/structure of campaign landing pages compared to the previous way of working?
+
+
+
+Goal: Evaluate whether and how the new system “better supports” marketing teams, using a before/after comparison.
+
+
+
+Methods: Before/after metrics, survey/interviews, expert review and descriptive statistics.
+
+SQ6 - Potential AI support for configuration
+
+
+
+
+
+Question: Which parts of the campaign landing‑page configuration process are suitable for support by an AI‑based assistant, and what could a small concept or minimal prototype for such support look like?
+
+
+
+Goal: Explore realistic AI support options at a small scale.
+
+
+
+Methods: Interview add‑ons, desk research on AI tools, concept prototype and user feedback sessions.
+
+2.4 Target audiences
+
+The outcomes of this project are relevant for three main groups:
+
+
+
+
+
+Marketing and product stakeholders in the EMEA region who request and shape campaign landing pages.
+
+
+
+The digital/front‑end team responsible for implementing and maintaining templates and components in the custom CMS.
+
+
+
+Internal decision‑makers and future developers who will reuse or extend the template system and related guidelines.
+
+
+
+3. Process - Design Thinking Phases
+
+In this section I explain how I applied the six Design Thinking steps in my graduation project. Each phase describes the objective, the linked research question(s), the approach and methods, the main tasks, and the results and conclusions. Together, the phases show how the project moves from understanding the current situation to delivering a refined, implemented template system.
+
+Phase 1: Empathize
+
+
+
+
+
+Objective
+The goal of Empathize is to understand in detail how campaign landing pages are currently requested, configured and implemented in the custom CMS, and how marketers and developers experience this process in their daily work. I focus on concrete steps, tools and roles so that later design decisions fit actual practice rather than an idealised process.
+
+
+
+
+Linked research question(s)
+Empathize mainly answers SQ1 - Current situation and issues by mapping the existing workflow, tools, templates and collaboration patterns, and by identifying key pain points and limitations for marketers and the digital/front‑end team.
+
+
+
+
+Approach and methods
+I use case studies of five real campaign landing pages, semi‑structured interviews with key stakeholders, artefact and CMS analysis, and limited observation/shadowing. I code the findings thematically to build a rich and realistic picture of the current situation. This allows me to compare what is supposed to happen (briefings, templates, guidelines) with what actually happens (workarounds, manual fixes, communication loops and technical constraints).
+
+
+
+
+Tasks
+
+
+
+
+
+Artefact and CMS analysis (briefing documents, existing templates, configuration screens)
+
+
+
+
+
+Reason: Analysing real briefings, Figma files, existing templates and CMS configuration screens helps me see how the current system supports or blocks consistent and usable landing pages. In this task I systematically review the content models, modules, page structures and configuration options in the CMS, and link them to the way they are actually used in recent campaigns.
+
+
+
+
+
+CMS analysis @CMS Analysis
+
+
+
+
+
+Case studies of five March/April landing pages
+
+
+
+
+
+Reason: Following each landing page from initial briefing to go‑live helps me see how campaign requests are translated into CMS structures, where manual adjustments occur, and how consistent the resulting pages are across different projects. For each case I compare the briefing, Figma design and live page, and I note where templates were reused, where custom work was needed and where the CMS created friction.
+
+
+
+
+
+Case Study 01 - Hannover Messe 2026
+
+
+
+
+
+Figma Link: https://www.figma.com/design/fRPz3MHvlYK5mpMPx9qcY8/HM26?node-id=294-2&t=ME4I96IVneY6BOAy-1
+
+
+
+Live Page: Hannover Messe 2026
+
+
+
+Case Study 1 - Report: @Case Study 1
+
+
+
+Source Code (Version Control): 1.HM26
+
+
+
+Case Study 02 - Smarter E 2026
+
+
+
+
+
+Figma Link: https://www.figma.com/design/B7xMJlPPqr00chczH0SLmD/SmarterE?node-id=0-1&t=gPCcQee370yk3Nzn-1
+
+
+
+Live Page: Smarter E 2026
+
+
+
+Case Study 2 - Report: @Case Study 2
+
+
+
+Source Code (Version Control): 2.SmarterE
+
+
+
+Case Study 03 - MCE 2026
+
+
+
+
+
+Figma Link: https://www.figma.com/design/pi5NIu9xfAhNNK07YhifX2/MCE?node-id=0-1&t=yJIkCm1QuiSPSyXl-1
+
+
+
+Live Page: MCE 2026
+
+
+
+Case Study 3 - Report: @Case-study-3
+
+
+
+Source Code (Version Control): 3.MCE
+
+
+
+Case study 04 - Power and Cooling (Tablet & mobile version)
+
+
+
+
+
+Figma Link: https://www.figma.com/design/6Q8m9DZi6VnDo3rkSlXrFn/PSBG---Product-page-enhance-desktop--tablet-and-mobile-version?node-id=0-1&t=rFoeSd1FXNBDqSL1-1
+
+
+
+Live Page: Power and Cooling Solutions for Data Center
+
+
+
+Case Study 4 - Report: @Case-Study-4
+
+
+
+Source Code (Version Control): 5. PSBG
+
+
+
+Case Study 05 - Advanced Factories 2026
+
+
+
+
+
+Figma Link: https://www.figma.com/design/q0U9pUmRQMvWdOzz3pHqXW/Advanced-Factory?node-id=23-21&t=HJuTKY0VvzNMCwmE-1
+
+
+
+Live Page: https://www.delta-emea.com/en-GB/landing/Advanced-Factories-2026
+
+
+
+Case Study 5 - Report: @Case Study 5
+
+
+
+Source Code (Version Control): 4.Advanced Factories
+
+
+
+Cases Study Final Report @Case Study Report
+
+
+
+Semi‑structured interviews with key stakeholders (marketing, product, digital/front‑end)
+
+
+
+
+
+Reason: These interviews give me direct insight into pain points, expectations, workarounds and collaboration issues that people experience in practice, beyond what I can see in the CMS or Figma files. I use a semi‑structured guide so I can ask comparable questions across stakeholders, but still follow up on specific issues per case.
+
+
+
+
+
+Stakeholder 01 (Hannover Messe 2026): Fidan @InterviewR01
+
+
+
+Stakeholder 02 (MCE 2026): Rose @InterviewR02
+
+
+
+Stakeholder 03 (Smarter E 2026): Joyce @InterviewR03
+
+
+
+Stakeholder 04 (Power & Cooling): Fiona @InterviewR04
+
+
+
+Stakeholder 05 (Advanced Factories): Christina @InterviewR05
+
+
+
+Team member (intern): Teodor @InterviewR06
+
+
+
+Interview questions: @Interview questions.docx
+
+
+
+
+
+Observation/shadowing of part of the workflow
+
+
+
+
+
+Reason: Observing real interactions with the CMS and collaboration moments between marketers and developers helps me uncover practical issues that may not be mentioned explicitly in interviews, such as small workarounds, repetitive steps or informal communication channels. I shadow parts of the workflow during configuration, content entry and review moments to see how people actually navigate the system and coordinate with each other.
+
+
+
+Satisfaction survey, empathy map and stakeholder analysis
+
+
+
+
+
+Reason: Observing real interactions with the CMS and collaboration moments between marketers and developers helps me uncover practical issues that may not be mentioned explicitly in interviews, such as small workarounds, repetitive steps or informal communication channels. I shadow parts of the workflow during configuration, content entry and review moments to see how people actually navigate the system and coordinate with each other.
+
+
+
+
+
+Satisfaction Survey report @Satisfaction survey.docx
+
+
+
+Stakeholder analysis report @UserAnalysisReport
+
+
+
+
+
+Results
+Empathize yields a structured overview of how campaign landing pages are currently created, which roles are involved when, and which tools and templates are used in each step. Across the five case studies, interviews, survey and observations, recurring pain points emerge around efficiency (extra manual work and rework), consistency (different layouts and patterns between campaigns), clarity (unclear responsibilities or expectations) and technical constraints of the current templates and configuration options.
+
+
+
+
+Conclusion
+From Empathize I conclude that the current workflow and template setup do not always support marketers in a simple, predictable and consistent way, and that digital/front‑end colleagues often need to step in with custom adjustments to make pages match the design or campaign needs. The evidence from the five case studies, six stakeholder interviews, satisfaction survey, empathy map and stakeholder analysis shows that people recognize the value of the CMS, but experience friction in areas such as reusing patterns across markets, aligning Figma designs with available components, and handling last‑minute changes without breaking consistency or creating extra work. Overall, Empathize confirms that there is clear room for improvement in the template structure, configuration options, documentation and reuse strategy, and that any new template system should explicitly address the everyday pain points of both marketers (speed, clarity, flexibility) and developers (maintainability, scalability, fewer ad‑hoc fixes).
+
+
+
+
+Next step
+Use the insights, pain points and themes from Empathize to define concrete goals, constraints and requirements for a template system in the Define step, so that the next phases of the project are directly grounded in the real problems and opportunities identified in this phase.
+
+
+
+Phase 2: Define
+
+
+
+
+
+Objective
+In Define I translate the insights from Empathize into clear goals, constraints and requirements for a new template system that fits both stakeholder needs and the limitations of Delta’s existing custom CMS. The aim is to move from a broad list of issues and opportunities to a structured, prioritised requirement set, using MoSCoW (Must/Should/Could/Won’t) to make the scope realistic.
+
+
+
+
+Linked research question(s) 
+Define mainly answers SQ2 – Goals, constraints and requirements for a template system by clustering insights from case studies, interviews, survey and stakeholder analysis into requirement groups (content, structure, usability, self‑service, technical and brand) and validating these with stakeholders.
+
+
+
+
+Approach and methods
+I cluster themes and pain points from Empathize into requirement groups such as content structure, page layout, reusability, self‑service for marketers and technical constraints in the CMS. I then perform a requirements analysis, apply MoSCoW prioritisation, validate my interpretation with stakeholders, and review external examples and guidelines to check whether the requirements are realistic and aligned with best practices.
+
+
+
+
+Tasks
+
+
+
+
+
+Heuristic evaluation
+
+
+
+
+
+Reason: I perform a heuristic evaluation of current and concept landing‑page layouts against recognised UX and usability principles (for example clarity of calls‑to‑action, consistency, feedback, and mobile friendliness) to turn general observations into concrete usability requirements. This helps me say not only “the current pages feel inconsistent” but also “the template system must support clear visual hierarchy, consistent component behaviour and accessible interaction patterns for both desktop and mobile.”
+
+
+
+
+
+Heuristic evaluation @HeuristicEvaluationR
+
+
+
+Empathy map
+
+
+
+
+
+Reason: I reuse and refine the empathy map from Empathize to connect user goals, frustrations, thoughts and behaviours directly to requirements, for example “marketers need to launch pages quickly without asking developers” becoming a self‑service requirement. By mapping what stakeholders say, think, do and feel during the landing‑page workflow, I can check whether the requirement groups really reflect their experience and whether any important needs are missing.
+
+
+
+
+
+Empathy Map @Empathy map.docx
+
+
+
+Personas
+
+
+
+
+
+Reason: I create and refine lightweight personas (for example “EMEA campaign marketer”, “digital/front‑end developer”, “product stakeholder”) to represent the main user types of the template system and their different needs, skills and constraints. These personas help me balance requirements between speed and flexibility for marketers, and maintainability and technical quality for developers, and prevent me from optimising the template system only for a single role.
+
+
+
+
+
+Personas https://www.figma.com/design/8VeqcDaLRiGeNPFl6OrnLl/Personas?node-id=0-1&t=tGiKUkcbYQbF8mSW-1
+
+
+
+Delta landing page artefacts
+
+
+
+
+
+Reason: I revisit and synthesise key artefacts from the five case studies (briefings, Figma designs, live pages, CMS configurations) into a consolidated set of “Delta landing‑page artefacts” that show recurring patterns and edge cases. By analysing these artefacts together, I can derive requirements about content types, layout patterns, responsiveness, localisation, and integration with forms or other systems, and I can identify hard technical constraints in the current CMS that the template system must respect.
+
+
+
+
+
+Delta Landing page Artefacts: https://www.figma.com/design/Lgv2MsHGrnHX4wGYQV4wyq/Delta-landing-page-artefacts?t=tGiKUkcbYQbF8mSW-1
+
+
+
+
+
+Results
+The Define step delivers a validated and prioritised list of requirements for the template system, grouped into content and structure needs (for example required sections, modules and content types), usability and self‑service expectations (for example how easily marketers can configure and reuse templates), technical constraints of the existing CMS (for example available fields, components and performance limits), and brand and consistency guidelines that the templates must support. Each requirement is classified using MoSCoW, and the resulting list is reviewed with key stakeholders so that there is shared agreement on what the first version of the template system must deliver and which ideas can be planned for later iterations.
+
+
+
+
+Conclusion
+At the end of Define, I have moved from a broad set of pain points and observations to a structured, stakeholder‑validated requirement set that describes what the template system must achieve for its users and what it must respect in terms of technology and brand. The combination of heuristic evaluation, empathy map, personas and Delta landing‑page artefacts ensures that requirements are grounded in real behaviour and real pages, not just in abstract wishes, and that both marketer and developer perspectives are represented in the final MoSCoW list. This gives me a clear, realistic scope for the next phases and reduces the risk of designing concepts that are either technically infeasible or misaligned with stakeholder expectations.
+
+
+
+
+Next step
+Based on these requirements, I move into Ideate to explore and compare possible concepts for templates, components and configuration flows, using the Must/Should requirements as hard design criteria and the Could requirements as inspiration for future improvements.
+
+
+
+Phase 3: Ideate
+
+
+
+
+
+Objective
+In Ideate I generate and explore different concepts for the template system, including template and component structures, configuration flows and potential AI support options, based on the requirements from Define. The aim is to move from “what the system must do” to concrete ideas for “how it could work in practice”.
+
+
+
+
+Linked research question(s) 
+Ideate mainly answers SQ3 - Concept and design of the template system, and explores SQ6 - Potential AI support for configuration at idea level. I develop alternative concepts for templates, components and configuration flows that satisfy the requirements and narrow them down to one coherent concept that fits the existing CMS.
+
+
+
+
+
+Approach and methods
+I start from the requirement groups defined in Phase 2 and translate them into “How might we…?” questions to open up the solution space (for example “How might we let marketers configure pages without breaking consistency?”). I then use a mix of benchmarking, structural analysis and concept sketching: I benchmark other CMSs and template systems, analyse different ways of storing and reusing layouts, study sidebar patterns for configuration, and sketch several alternative flows and page structures. For potential AI support, I review examples of AI‑assisted landing‑page tools and CMS features to see which ideas are desirable, technically plausible and aligned with Delta’s context, keeping them explicitly at “idea level” (no implementation). Throughout this phase I compare concepts against the MoSCoW requirements from Define to avoid “nice ideas” that do not fit the real constraints.
+
+
+
+
+Tasks
+
+
+
+
+
+Benchmark analysis
+
+
+
+
+
+Reason: I conduct a benchmark analysis of existing CMSs, landing‑page builders and template systems (for example how they structure templates, components and configuration panels) to learn from proven patterns and common pitfalls. This helps me identify which elements (such as reusable modules, preset layouts, or guided configuration wizards) could be adapted to Delta’s custom CMS and where I need to design something more specific for this organisation.
+
+
+
+
+
+Benchmark analysis @BenchmarkA
+
+Storage and sharing analysis
+
+
+
+
+
+Reason: I analyse different ways to store, share and reuse landing‑page templates and components, both within Delta’s current CMS and in external tools. This includes questions such as: How can marketers easily reuse a successful layout? How can we store variations for different markets? How can developers update shared components without breaking existing pages? The outcome is a set of concept options for storage (for example master templates, pattern libraries, or “starting points”) and for sharing templates across teams and campaigns.
+
+
+
+
+
+Storage and Sharing Analysis @Storage and Sharing Analysis
+
+
+
+Left and right sidebar analysis
+
+
+
+
+
+Reason: I perform a focused analysis of left and right sidebar patterns in template and page builders (for example where navigation sits, where configuration fields live, and how previews are shown) to design a configuration flow that is clear and efficient for marketers. By comparing different sidebar layouts, groupings of settings and preview behaviours, I explore options for how the Delta CMS could support guided configuration without overwhelming users with options.
+
+
+
+
+
+Left and Right Sidebar Analysis @Sidebars Analysis
+
+
+
+AI concept
+
+
+
+
+
+Reason: I explore high‑level AI concepts that could support marketers and developers when configuring landing pages, such as AI‑generated content suggestions, layout recommendations based on campaign goals, or smart defaults based on previous pages. In this task I map where AI could meaningfully reduce manual work or improve consistency, while staying realistic about data, privacy and technical constraints, so that the AI ideas can inform future development without blocking the current template system.
+
+
+
+
+
+AI concept @AI-Concept
+
+
+
+
+
+Results
+Ideate leads to one selected concept for the template system that best fits the requirements: a coherent set of templates and components, with a configuration flow (for example using sidebars and clear steps) that supports marketers in building consistent pages with less developer involvement. Alongside this, I produce a short list of promising AI support ideas (such as AI‑assisted copy suggestions or recommended modules per campaign type) that are documented at idea level and explicitly marked as “future options” for Delta’s CMS. The chosen concept is described with its main templates, key components, configuration steps and storage/sharing approach, and is linked back to the MoSCoW requirements from Define.
+
+
+
+
+Conclusion
+At the end of Ideate, I know which concept I will take forward into Prototype and why this concept is a good fit for both users and the existing CMS. The benchmark, storage/sharing and sidebar analyses give me evidence that the chosen structure aligns with common best practices while still respecting Delta’s technical constraints, and the AI concept work clarifies which AI ideas are attractive but out of scope for immediate implementation. This phase therefore narrows a broad set of ideas into a grounded, realistic design direction that is traceable back to user needs and requirements, reducing the risk of rework in the later Prototype and Implement phases.
+
+
+
+
+Next step
+Turn the chosen concept into a working prototype and implementation in the CMS in the Prototype step, so that I can test the template system with real content, real users and real technical constraints, and refine it based on concrete feedback instead of only theoretical reasoning.
+
+
+
+Phase 4: Prototype
+
+
+
+
+
+Objective
+Design and build a first working version of the template system in the custom CMS, including at least one landing‑page archetype, three to five reusable components, and a clearer configuration flow based on the selected concept from Ideate. In parallel, I prototype a small AI support concept if feasible, so I can test how AI might assist with configuration in a realistic but limited way without risking the stability of the core template system.
+
+
+
+
+Linked research question(s)
+
+
+
+
+
+SQ3 – Concept and design of the template system (detailed design).
+
+
+
+SQ4 – Implementation and refinement in the CMS.
+
+
+
+SQ6 – Potential AI support for configuration (prototype level).
+In Prototype I refine the concept from Ideate into detailed interaction and visual design, translate this design into a working implementation in the CMS, and, where possible, create a small AI prototype that demonstrates one or two concrete support scenarios. This phase therefore connects design decisions (SQ3) with real technical implementation (SQ4) and moves AI support ideas from abstract to tangible example (SQ6).
+
+
+
+
+
+Approach and methods
+I start with low‑fidelity prototypes to define and test the structure, flow and key states of the template system without being distracted by visual details, using simple frames and wireframes in Figma that focus on layout, component placement and configuration steps. Once the structure is stable, I move to high‑fidelity prototypes in Figma that include real UI components, Delta branding, realistic content and interaction details, so stakeholders can see how the system will look and behave. Based on the high‑fidelity design, I implement the archetype page and components in the custom CMS front‑end, keep implementation logs, and document design artefacts (for example component specifications) to make the translation from Figma to CMS explicit and traceable. In parallel, I explore a small AI prototype (for example a guided suggestion or configuration helper) using existing AI tools or scripts, and document its behaviour and limitations clearly.
+
+
+
+
+Tasks
+
+
+
+
+
+Low‑fidelity prototype
+
+
+
+
+
+Reason: I first create a low‑fidelity prototype in Figma that captures the basic structure of the landing‑page archetype, the placement of reusable components and the main steps in the configuration flow (for example how a marketer selects an archetype, adds modules and configures content). Working in low fidelity allows me to quickly test different layouts and flows with stakeholders, and to adjust the concept before investing time in detailed visual design or CMS implementation.
+
+
+
+
+
+Low-fidelity Prototype: https://www.figma.com/design/AkXyLdTUz6s92id2RSYeLQ/Low-Fidelity-Prototype?node-id=0-1&t=njzTyqEsoSs8192q-1
+
+
+
+Mid-fidelity prototype
+
+
+
+
+
+Reason: After aligning on the structure and flow, I create a high‑fidelity prototype in Figma that uses Delta’s design system, brand colours, typography and realistic campaign content, and that simulates the key interactions of the template system. This high‑fidelity prototype helps stakeholders and developers understand the final look and feel of the templates and components, reduces ambiguity when implementing in the CMS, and provides a reference for later evaluation in the Test phase.
+
+
+
+
+
+Mid-fidelity Prototype: https://www.figma.com/design/zHXG0K9REwfVwFN3yKmPl9/Design-System?node-id=0-1&t=5X25dpILyJr6E1VN-1
+
+
+
+High‑fidelity prototype
+
+
+
+
+
+Reason: I create several iterations of high‑fidelity prototypes that include the final or near‑final visual design, component states and interactions, so that the template system looks and behaves close to the intended end result. Version 1 focuses on translating the concept directly; Version 2 and Version 3 incorporate feedback from stakeholders and implementation constraints, for example adjusting spacing, responsive behaviour or configuration labels to match the actual CMS. These high‑fidelity prototypes act as the main reference for front‑end implementation and for aligning marketing and digital teams.
+
+
+
+
+
+Version 1: https://www.delta-emea.com/en-GB/landing/UI-library-test
+
+
+
+Version 2: https://www.delta-emea.com/en-GB/landing/Template-System-v1
+
+
+
+Version 3: Template System V3
+
+
+
+
+
+Results
+The Prototype step delivers an implemented template system in the CMS with at least one landing‑page archetype and several reusable components that follow the selected concept and the MoSCoW requirements from Define. The configuration flow is now implemented more clearly in the CMS (for example through logical grouping of settings and a more guided sequence of steps), and the Figma prototypes and implementation logs document how the design was translated into code. If feasible, this phase also results in a small AI prototype (such as an example of AI‑assisted configuration or content suggestion) that can be shown to stakeholders as a concrete illustration of how AI might support the workflow in the future.
+
+
+
+
+Conclusion
+At this point, the template system is no longer just a concept but a working solution in Delta’s custom CMS, supported by both low‑ and high‑fidelity prototypes that show its structure and visual design. I have demonstrated that the chosen concept can be implemented within the existing technical constraints and that a set of core components and at least one landing‑page archetype can be configured by marketers in a more structured way than before. The implementation logs and design artefacts make the design‑to‑development translation transparent, and the small AI prototype shows, at a realistic but limited level, how AI could support configuration tasks without replacing the core template logic. Together, these outcomes give a solid basis for evaluating the system in real campaigns and for discussing future iterations with both marketing and digital teams.
+
+
+
+
+Next step
+Use the new template system and, where relevant, the AI prototype in a real campaign and test their impact in the Test step, focusing on efficiency, consistency, usability and the perceived value of any AI support compared to the previous workflow.
+
+
+
+Phase 5: Test
+
+
+
+
+
+Objective
+In Test I evaluate how well the new template system – and, where applicable, the AI prototype – works for stakeholders and how much it improves ease of use, effort and page consistency compared to the previous way of working. The goal is to gather evidence about what works, what creates friction and which changes are needed before finalisation.
+
+
+
+
+Linked research question(s)
+
+
+
+
+
+SQ4 – Implementation and refinement in the CMS (application in a realistic context).
+
+
+
+SQ5 – Impact on ease of use and page consistency.
+
+
+
+SQ6 – Potential AI support for configuration (evaluation).
+Test uses the implemented system in realistic tasks, compares the new workflow with the old one and evaluates the perceived value of any AI support.
+
+
+
+
+
+Approach and methods
+I create a usability testing plan that defines goals, setup, tasks and success criteria. I then run usability testing sessions with stakeholders, in which they execute realistic tasks in the new template system and respond to the AI prototype where relevant. Finally, I document each session and combine the results into one consolidated report so patterns across participants become visible.
+
+
+
+
+Tasks
+
+
+
+
+
+Usability testing plan
+
+
+
+
+
+Reason: I prepare a clear test plan to make sure the sessions are consistent, focused and directly linked to the research questions. The plan defines what I want to learn, which tasks the participants will perform, and which aspects I will observe, such as ease of use, time needed, clarity of configuration and consistency of the final page.
+
+
+
+Template system reparation before testing
+
+
+
+
+
+Reason: I refine/polish and adjust the Template System following the Delta brand guidelines to make sure that the Template system had the pre-final look before testing together with Rose and Fidan.
+
+
+
+
+
+Source code (version control): Template
+
+
+
+Version 4: Template System V4
+
+
+
+Version 5: Template System V5
+
+
+
+Version 6: Template System V6
+
+
+
+Usability testing tasks
+
+
+
+
+
+Reason: I give participants realistic tasks based on the new template system, such as selecting a landing‑page archetype, configuring components, adjusting content and reviewing the result. These tasks show where the system supports users well, where they hesitate, and whether the AI prototype adds value or creates confusion.
+
+
+
+
+
+@Usability Testing Tasks
+
+
+
+Usability testing report
+
+
+
+
+
+Reason: I document each session carefully so I can capture both direct feedback and observed behaviour. The report helps me identify common issues, positive reactions and suggestions for improvement from the nine people involved: Andrea, Bilyana, Rose, Christina, Nadine, Fiona, Wil, Thy and Fidan.
+
+
+
+
+
+@Participant 1
+
+
+
+@Bilyana.docx
+
+
+
+@Rose.docx
+
+
+
+@Christina.docx
+
+
+
+@Nadine.docx
+
+
+
+@Fiona.docx
+
+
+
+@Wil Chiang.docx
+
+
+
+@Thy Bui.docx
+
+
+
+@Fidan.docx
+
+
+
+Consolidated report from 9 people
+
+
+
+
+
+Reason: I combine the results from all nine participants into one analysis to find repeated patterns and compare feedback across roles. This consolidated view is important because it shows whether the new system works consistently for different stakeholders, not only for one person or one test case.
+
+
+
+
+
+@Consolidated Report.docx
+
+
+
+
+
+Results
+The Test step delivers a clear overview of how well the new template system performs in a realistic campaign situation, including where it improves usability, reduces effort and supports more consistent page outcomes. It also shows whether the AI prototype is useful enough to keep exploring, or whether it is better treated as a future idea rather than part of the core solution.
+
+
+
+
+Conclusion
+At the end of Test, I know how the solution performs in practice and what still needs improvement before it can be considered a strong final result. This phase gives me evidence about what works well, what creates friction, and whether the template system is genuinely better than the old process for the people who need to use it.
+
+
+
+
+Next step
+Use the test findings to refine the final solution, identify remaining fixes or limitations, and prepare the last implementation and reflection phase so I can explain what the project achieved, what changed, and what I would improve next.
+
+
+
+
+Phase 6: Implement
+
+
+
+
+
+Objective
+In Implement I refine and finalise the template system in the custom CMS by implementing the most important findings from the usability testing, so that a stable and approved version is available as a complete product for real campaigns. The focus is on translating evidence from Test into concrete improvements in templates, components and configuration flow and on delivering clear documentation and recommendations.
+
+
+
+
+
+Linked research question(s)
+SQ4 – Implementation and refinement in the CMS (final integration).
+SQ5 – Impact and future improvement directions.
+SQ6 – Potential AI support for configuration (recommendations).
+Implement completes SQ4 by integrating the tested solution into the CMS in its refined and approved form, concludes SQ5 by reflecting on the impact of the final system and its remaining limitations, and closes SQ6 by turning AI findings into practical recommendations rather than further prototype work.
+
+
+
+
+Approach and methods
+I use the findings from the usability testing and consolidated report as the basis for the final implementation round. I review the feedback, decide which issues must be fixed before approval, apply the changes in the CMS and in the design documentation, and validate the final result with stakeholders. This phase is therefore both practical and reflective: I improve the working system, document the final decisions, and prepare the project for handover and final evaluation.
+
+
+
+
+Tasks
+
+
+
+
+
+Prioritise and translate test feedback
+
+
+
+
+
+Reason: I first review all findings from the usability testing and consolidated report to identify which issues are critical, which are small improvements, and which ideas should be saved for future development. This helps me keep the final implementation focused and ensures that the most important usability and consistency problems are solved before approval.
+
+
+
+
+
+Version 7: Template System V7
+
+
+
+Version 8: Template System V8
+
+
+
+Version 9: Template System V9
+
+
+
+Version 10: Template System V11
+
+
+
+Final implementation in the CMS
+
+
+
+
+
+Reason: I apply the selected improvements directly in the custom CMS and update the template system, components and configuration flow where needed. This task turns the test feedback into concrete improvements in the live solution and makes sure the final version works as intended in the actual technical environment.
+
+
+
+
+
+Final Version: Delta Template System - Username: DeltaEMEA / Password: Mrkt2026
+
+
+
+Validation and approval
+
+
+
+
+
+Reason: After the implementation changes are completed, I review the final version with relevant stakeholders to confirm that the main issues from testing have been addressed. This validation step is important because it provides formal and practical confirmation that the final system is ready to be used and accepted within the company context.
+
+
+
+
+
+Template system satisfaction report:
+
+
+
+Final documentation and recommendations
+
+
+
+
+
+Reason: I document the final version of the template system, the key changes made after testing, and the lessons learned from implementation. I also write recommendations for future development, including how Delta could further improve the template system and whether AI support is worth exploring in a later phase.
+
+
+
+
+
+Technical Report: @Delta Landing Page Builder Technical Report
+
+
+
+C4 Mode document @Delta Landing Page Template System C4 Model
+
+
+
+
+
+Results
+The Implement step delivers the final version of the template system in the CMS, improved based on usability testing and ready for real use with stakeholder approval. It also provides a documented overview of the final components, configuration flow, implemented improvements and future recommendations, so the outcome is not only usable in practice but also clear and transferable for the organisation.
+
+
+
+
+Conclusion
+At the end of Implement, the project has moved from research and concept development to a tested and approved final solution. The feedback from stakeholders has been translated into practical improvements, which strengthens the usability, consistency and realism of the template system. This phase also shows the value of the full Design Thinking process: instead of stopping at ideas or prototypes, I was able to bring the project to a final integrated result that fits both user needs and the technical context of Delta’s custom CMS.
+
+
+
+
+Next step
+Use the final implemented solution, project outcomes and reflections as the basis for the final presentation, portfolio case study and graduation report, including a clear reflection on what was achieved, what limitations remained, and how the work could be extended in the future.
+
+
+
+4. Answers to the sub‑research questions
+
+In this section I provide a concise but explicit answer to each sub‑research question. These answers are based on the outcomes of the Design Thinking phases and bring together the most important findings from the research, design, testing and implementation work carried out during the project.
+
+4.1 SQ1 – Current situation and issues
+
+How are campaign landing pages currently created and configured in Delta’s custom CMS, and what difficulties do marketing teams and developers experience with the existing templates and tools?
+
+The research shows that campaign landing pages at Delta are often created through a fragmented process in which briefings, Figma designs, CMS configuration and front‑end implementation are not always closely aligned. In practice, this means that marketers depend regularly on developers to translate campaign ideas into working pages, especially when the existing templates do not support the desired layout or content structure well enough.
+
+Across the five case studies, stakeholder interviews, observations and survey findings, several recurring problems became visible. First, the workflow contains too much manual work and rework, because pages are frequently adjusted case by case instead of being built from a stable and reusable template logic. Second, there is inconsistency between campaigns, because the available templates and components do not always guide users towards the same structure, hierarchy or interaction patterns. Third, the current configuration process is not sufficiently intuitive for marketers, which limits self‑service and increases dependence on digital and front‑end colleagues. Finally, developers experience friction because ad‑hoc fixes and one‑off solutions reduce maintainability and make it harder to scale successful patterns across campaigns.
+
+The answer to SQ1 is therefore that the current landing‑page process is functional but inefficient, inconsistent and too dependent on manual interpretation and technical support. The main issues are not only visual or technical; they are also process‑related, because the system does not yet provide enough structure, clarity and reuse for the stakeholders who work with it.
+
+4.2 SQ2 – Goals, constraints and requirements for a template system
+
+What goals, constraints and requirements do stakeholders have for a template system that should be user‑friendly for marketing teams and support consistent, well‑structured campaign landing pages?
+
+The findings from Empathize show that stakeholders want a template system that improves both usability and consistency without making the CMS more complicated. For marketers, the most important goal is to be able to create and configure campaign landing pages more independently, with clearer guidance and less need for developer intervention. For the digital and front‑end team, the key goal is to reduce one‑off implementations and improve maintainability, scalability and reuse across campaigns.
+
+These needs were translated in the Define phase into a set of functional, UX and technical requirements. At functional level, the system needed to support reusable page structures, clear component options and a manageable number of content variations. At UX level, it needed to offer a clearer configuration flow, understandable labels, better grouping of settings and stronger guidance for users. At technical level, the solution had to fit within the constraints of Delta’s existing CMS, including the available content models, front‑end structure and implementation capacity. In addition, the system had to respect Delta’s brand identity and support consistent visual and structural patterns across campaigns.
+
+The final answer to SQ2 is that the template system must balance four core requirements: it must be usable for marketers, consistent across campaigns, technically feasible within the existing CMS, and maintainable for the team that supports it. These requirements were prioritised with MoSCoW so that the first version remained realistic and focused.
+
+4.3 SQ3 – Concept and design of the template system
+
+Which template and component concepts are feasible within the existing CMS, and what design for a user‑friendly template system best fits the identified requirements?
+
+The concept exploration showed that the most suitable direction was not an open‑ended page builder with unlimited freedom, but a more structured template system built around reusable archetypes, reusable components and a clearer configuration flow. This concept fits Delta’s context because it gives marketers enough flexibility to build relevant campaign pages, while still protecting consistency and maintainability.
+
+Benchmarking, storage and sharing analysis, and sidebar analysis helped identify which patterns from other systems could realistically be adapted to Delta’s CMS. The selected concept therefore combined a defined landing‑page archetype with modular sections and a more guided way of configuring content and layout. This approach reduces ambiguity for users and makes it easier to repeat successful page patterns across campaigns. It also supports better alignment between Figma design, CMS structure and front‑end implementation.
+
+The answer to SQ3 is that the most feasible and appropriate design is a structured template system based on reusable components, clear page archetypes and guided configuration rather than full design freedom. This concept best matches the requirements from SQ2 because it creates a practical balance between user friendliness, consistency and technical realism.
+
+4.4 SQ4 – Implementation and refinement in the CMS
+
+How can the chosen template system be implemented in Delta’s custom CMS and iteratively refined into a stable, reusable product based on stakeholder and usability‑testing feedback?
+
+The project shows that the chosen concept can be implemented step by step through a combination of prototyping, front‑end development, iterative testing and controlled refinement. In the Prototype phase, the selected concept was first translated into low‑fidelity and high‑fidelity designs, after which the core archetype and reusable components were implemented in the CMS. This made it possible to move from a conceptual direction to a working solution within the real technical environment of Delta.
+
+The Test and Implement phases were essential in turning this first version into a stronger and more complete product. Usability testing with nine participants revealed where the configuration flow was clear, where users hesitated and which parts of the system still needed improvement. These findings were then prioritised and translated into concrete refinements in the final implementation round. As a result, the final version is not only technically implemented, but also iteratively improved on the basis of stakeholder feedback and observed user behaviour.
+
+The answer to SQ4 is therefore that implementation works best as an iterative process: concept design is translated into prototypes, prototypes are implemented in the CMS, and the resulting system is then refined through testing, validation and documentation. This process led to a stable and reusable first version of the template system that is suitable for real campaign use.
+
+4.5 SQ5 – Impact on ease of use and page consistency
+
+To what extent does the new template system improve marketing teams’ perceived ease of use and the consistency/structure of campaign landing pages compared to the previous way of working?
+
+The usability tests and stakeholder feedback indicate that the new template system improves the landing‑page workflow in meaningful ways. Compared to the previous way of working, the new system provides more structure, clearer guidance and a more predictable configuration process, which helps users understand how pages should be built and how components should be used. This supports marketers in working with greater confidence and reduces the need for repeated clarification or developer assistance.
+
+The improvement is also visible in page consistency. Because the system is based on archetypes and reusable components, it becomes easier to apply the same structural logic across campaigns instead of reinventing layouts each time. This does not mean that every page becomes identical, but it does mean that variation happens within a more controlled and coherent framework. For the digital and front‑end team, this contributes to better maintainability and less ad‑hoc correction work.
+
+The answer to SQ5 is that the new template system improves both perceived ease of use and structural consistency, although these improvements should be understood within the scope of the project. It is a strong first step rather than a final solution, but the evidence shows that the new workflow supports stakeholders better than the previous one.
+
+4.6 SQ6 – Potential AI support for configuration
+
+Which parts of the campaign landing‑page configuration process are suitable for support by an AI‑based assistant, and what could a small concept or minimal prototype for such support look like?
+
+The project shows that AI support has potential, but only in carefully selected parts of the workflow. The most promising opportunities are not in replacing the core template logic, but in supporting users with tasks such as content suggestions, recommended page structures, smart defaults or guidance during configuration. In other words, AI appears most useful as an assistive layer around the template system rather than as the main driver of page creation.
+
+This is also why AI remained at concept or small‑prototype level in the project. The research and design work made clear that the primary need at Delta was first to establish a stable, understandable and reusable template system. Introducing AI too early would have added complexity to a workflow that still needed stronger structural foundations. At the same time, the exploration of AI ideas helped identify future directions that could become valuable once the template system itself is mature enough.
+
+The answer to SQ6 is therefore that AI support is most suitable for guidance, suggestions and efficiency improvements around configuration, but should be developed only after the core template system is stable. Within this project, AI is best positioned as a future enhancement rather than a central part of the implemented solution.
+
+
+
+5. Conclusion
+
+Is the problem solved?
+
+The project shows that the problem has been substantially solved, but not in an absolute or final sense. The original problem was not only that landing pages were difficult to build, but that the whole process around them was too dependent on manual work, unclear structure, and repeated adjustments across marketing and digital teams. Through the full Design Thinking process, I was able to study the current situation, define the core requirements, design a new template concept, build and test a working version, and finally improve it based on feedback. As a result, the new template system is no longer only an idea, but a practical solution that makes the landing-page workflow more structured, more reusable, and easier to handle in Delta’s custom CMS.
+
+The strongest evidence that the problem was solved comes from the fact that the new system responds directly to the main pain points identified in the research. The old process required too many manual decisions, too much back-and-forth, and too many custom fixes for every new landing page. The new solution reduces that complexity by introducing a clearer landing-page archetype, reusable components, and a more guided configuration flow. This means marketers can work with more confidence, while developers spend less time on repetitive adjustments. In that sense, the project solved the core problem of inconsistency and inefficiency in a meaningful way.
+
+At the same time, it is important to be realistic: the problem is solved within the scope of this project, not forever. A template system is never fully finished, because business needs, campaign types, and CMS constraints will continue to change. What I achieved is a strong first version that addresses the most important issues and creates a better foundation for future work. The system is therefore best understood as a step forward from the previous situation, not as the final endpoint of all possible improvements.
+
+What is the result
+
+The final result of this project is a working and approved template system for campaign landing pages in Delta’s custom CMS. It includes a clearer structure for page creation, reusable components that support consistency, and a configuration flow that is easier to understand and use. It was developed through research, tested with stakeholders, and refined based on real feedback, which makes the result more reliable than a concept-only design.
+
+Another important result is that the project created a shared understanding between research, design, and implementation. The case studies, interviews, survey, empathy map, and stakeholder analysis helped me understand what users needed. The Define phase translated those findings into concrete requirements. Ideate helped me compare different concepts and select one direction. Prototype turned that direction into a real working solution. Test showed what worked and what still needed improvement. Implement then brought the final feedback into the system and completed the solution. Because of this, the project result is not only the final CMS template system, but also a documented process that explains why the solution looks and works the way it does.
+
+The project also produced value beyond the template itself. It made the workflow more visible, clarified the priorities for future development, and showed where AI support could be useful in the future without forcing it into the core solution too early. This is important because it keeps the system practical and focused. The result is therefore both a design outcome and a strategic outcome: a better way of working now, plus a clearer direction for what can come next.
+
+Improvements for the future
+
+Even though the project has delivered a strong result, there are still several improvements that could be made in the future. The first area is template expansion. At the moment, the system is focused on the most important landing-page types and components, but additional archetypes and variations could be added later to support more campaign formats, markets, or content goals. This would make the system even more flexible without losing its consistency.
+
+The second area is deeper CMS integration. Some improvements may still be possible in how the template system connects with the existing technical structure of Delta’s CMS. For example, future work could improve the configuration interface, reduce remaining manual steps, or make component reuse even more automatic. If the CMS environment changes later, the system could also be updated to better match those technical changes. This means the solution can keep evolving with the company instead of staying fixed in one version.
+
+The third area is AI support. In this project, AI support was treated carefully and mainly at idea or prototype level. That was the right decision because the main system needed to be stable first. In the future, however, AI could be explored more seriously for tasks such as suggesting page structures, recommending suitable components, checking completeness of content, or helping marketers configure pages faster. If Delta wants to move in that direction, AI should be added in a controlled and useful way, not as a flashy extra feature.
+
+Another future improvement is better documentation and onboarding. Even a good system can be difficult to use if people do not understand how it works. Future work could therefore include clearer usage guidelines, short examples, and onboarding materials for marketers and developers. This would help new users learn the system faster and would reduce the risk of inconsistent use. It would also make the system easier to adopt across teams.
+
+A final improvement area is ongoing testing and refinement. Because campaign needs change over time, the system should continue to be checked against real use cases. New feedback from future campaigns can reveal where the system still feels slow, unclear, or too limited. That feedback can then feed into the next version. In this way, the project becomes part of a continuous improvement cycle rather than a one-time redesign.
+
+Conclusion and future improvements
+
+Overall, this project reached its goal. It solved the main problem of an inefficient and inconsistent landing-page workflow by creating a more structured, reusable, and user-friendly template system in Delta’s custom CMS. It also showed that a good solution does not come from design alone, but from connecting research, requirements, prototyping, testing, and implementation in one clear process. The final system is therefore both practical and evidence-based.
+
+The most important achievement is that the final solution matches real stakeholder needs and real technical limitations. It is not an abstract concept, and it is not overdesigned. It is a realistic improvement that can be used in practice and extended later. That makes the outcome valuable not only for the current campaign work, but also for the way Delta can think about future landing-page development.
+
+If I look forward, I see the project as a foundation for further growth. The next version could include more templates, smoother CMS interactions, better documentation, and possibly carefully designed AI support. These future improvements would not replace the current result; they would build on it. That is the main strength of the project: it creates a system that already works better now, while still leaving space for continuous development in the future.
+
+
+
+6. Reflection
+
+Midterm session – Supervisor feedback and personal reflection
+
+At the midterm point of my graduation internship, I organised a review session with my company supervisor to discuss progress, risks and next steps, and I also reflected on my own learning so far. In this session we looked back at the Empathize and Define phases (case studies, interviews, requirements and first concepts) and checked whether the project was still aligned with business expectations, planning and technical reality. The feedback and reflection below help me adjust the scope and priorities for the second half of the project and make my design and implementation work more focused and realistic.
+
+
+
+
+
+Supervisor feedback (company) – My supervisor confirmed that the project is valuable and on track, especially the depth of my research (case studies, interviews and requirements), and appreciated that I take ownership of the landing‑page work instead of waiting for instructions. At the same time, the feedback was that I should narrow the scope to a few core templates and components, make clearer choices in the MoSCoW list, and document design and technical decisions more consistently so that other team members can follow my reasoning and reuse the results later.
+
+
+
+
+
+Midterm Feedback - Fidan @MidTermFeedback.docx
+
+
+
+Self‑reflection – Looking back at the first half of the project, I am happy that I managed to build trust with stakeholders, complete five case studies and structure my work with the Design Thinking phases, but I also see that I sometimes try to do too many things in parallel and underestimate how long implementation and documentation take. For the second half, I want to communicate even more clearly about scope and timelines, test and iterate smaller prototype steps instead of big jumps, and use feedback moments more actively to challenge my own assumptions and grow as a UX/UI designer.
+
+
+
+
+
+Personal reflection - Khoa @MidTermStudentSelfReflection1_Khoa_Dang_Nguyen
+
+Final reflection
+
+Looking back at this graduation internship, I see this project as an important step in my development as a UX/UI designer. What started as a practical business problem around campaign landing pages became a much broader learning experience in research, design, implementation, communication and professional growth. During the project I was not only designing a better template system for Delta’s custom CMS, but also learning how to work in a real company environment where technical limitations, stakeholder expectations and business priorities all influence the design process. This reflection therefore looks at both sides of the project: the feedback from my supervisor about my professional performance, and my own reflection on what I learned, what I did well and what I still want to improve.
+
+Final supervisor feedback @Final_Evaluation
+
+The final feedback from my company supervisor shows that my work during the second half of the internship was seen as strong and valuable at a professional level. A major point in the feedback was that I demonstrated advanced performance in my professional duties. According to my supervisor, I showed a high level of skill in both coding and UI/UX design, and I contributed successfully not only to my graduation project but also to other important company work, such as the corporate website revamp. This feedback is meaningful to me because it confirms that my contribution was not limited to student-level exercises, but was relevant in a real organisational context and matched bachelor-level expectations in the IT field.
+
+Another strong part of the feedback was related to situation orientation. My supervisor highlighted that the landing page template builder directly addressed a long-standing pain point within the organisation, especially for the marketing team. Even though the solution was still in the UAT phase, the early feedback from stakeholders was already very positive because the approach was user-friendly and clearly responded to a real business need. This shows me that one of the strengths of my project was not only in design quality, but also in selecting and developing a solution that created long-term value for the company.
+
+In the area of professional standards, my supervisor evaluated me at a proficient level. The feedback emphasised that I applied structured problem solving and supported complex ICT projects with commitment and responsibility. It was also mentioned that I became involved in topics beyond the direct scope of the landing page system, such as the DAM platform launch and the research and planning of a future Marketing AI Automation Platform. I see this as encouraging feedback because it shows that I was trusted in broader digital and technical discussions. At the same time, the advice for growth was clear: I should continue developing my ability to use my understanding of marketing workflows to give more future-oriented and well-supported technical advice, especially in areas where design, front-end systems and AI solutions come together.
+
+The feedback on personal leadership was also important. My supervisor described me as committed, accountable and reliable, and appreciated that I took responsibility for my work and delivered with integrity. However, the most important development point was that I should move further from task execution to project ownership. This means that instead of mainly responding well to assigned work, I should become even stronger at independently identifying what needs to be done, taking initiative earlier, and guiding work more proactively. I think this is a very valuable point, because it describes the difference between being a good intern and becoming a strong professional who can lead and shape work with more confidence.
+
+My self-reflection
+
+My own reflection at the end of this internship is both positive and honest. I am proud that I was able to complete a complex project that connected research, UX thinking, UI design and technical implementation in one continuous process. I built a structured Design Thinking approach around a real organisational problem, completed five case studies, interviewed stakeholders, analysed workflows and CMS limitations, translated insights into requirements, created concepts, built prototypes, tested the system and implemented improvements. Looking back, I can see that I did not stay only on the surface of the problem. I tried to understand the full context, which helped me create a solution that was more realistic and useful.
+
+One of the things I did well was building trust with stakeholders. Throughout the project I had to work with different people from marketing, digital and other parts of the business. I learned how important it is to listen carefully, ask clear questions and show that feedback is taken seriously. I think this helped people feel involved in the project instead of feeling that the solution was simply designed for them without their input. This is an important lesson for my future as a UX/UI designer, because good design in a business context depends a lot on collaboration and trust, not only on visual skill.
+
+I also see clear growth in the way I approach design problems. At the beginning of the internship, I was very focused on solving visible interface problems. As the project developed, I became better at looking behind the interface and asking deeper questions: What is causing this issue in the workflow? Why do people rely on workarounds? What part of the system is unclear, inefficient or difficult to maintain? This helped me understand that UX design is not only about making screens look better, but also about improving systems, decisions and collaboration. That shift in mindset is one of the most valuable things I learned during this graduation project.
+
+At the same time, I also recognise my weaknesses. One recurring challenge was that I sometimes tried to do too many things at once. Because I was interested in both the design side and the technical side, I sometimes moved too quickly between research, ideation, implementation and documentation without narrowing my focus enough. This created pressure and sometimes made planning more difficult than necessary. I also learned that implementation and documentation often take much more time than expected, especially when the project is not only conceptual but also connected to a real CMS environment and real stakeholders. In future projects, I want to improve how I divide work into smaller steps, estimate time more realistically and communicate scope decisions earlier.
+
+Another important reflection is about confidence and initiative. During this internship I became more independent than before, but I can still grow further in taking full project ownership from the start. I can see that I already showed initiative by identifying problems, proposing solutions and handling multiple tasks responsibly. However, I also understand my supervisor’s point that the next step in my development is to become even more proactive in spotting opportunities, starting actions without waiting, and framing work more strategically. I want to become the kind of designer who not only completes assigned tasks well, but also helps shape what should happen next and why.
+
+What I learned from the full project
+
+This project taught me that a strong design process creates better outcomes than jumping directly to solutions. Because I used the Design Thinking phases in a structured way, I was able to connect each design decision back to evidence from case studies, interviews, testing and implementation feedback. This made the final result stronger and also made it easier to explain my decisions to others. I learned that research is not a separate academic activity away from design practice; it is what gives design direction and credibility.
+
+I also learned that working in a business environment requires balance. A good solution must be desirable for users, feasible within the technical system and valuable for the organisation. If one of these three sides is missing, the result will be weaker. In my project, I had to balance marketer needs, front-end and CMS limitations, company branding and future possibilities such as AI support. That balancing process was sometimes difficult, but it taught me how real design work happens in practice.
+
+Finally, this project confirmed that I want to continue growing in UI/UX design, especially in projects where research, systems thinking and interface design come together. I enjoyed not only making designs, but also understanding workflows, identifying pain points and building solutions that could improve the way people work. This internship therefore did not only help me complete my graduation project; it also helped me understand more clearly what kind of designer I want to become.
+
+Reflection on future growth
+
+For my future development, I want to focus on four main points. First, I want to strengthen my project ownership by taking initiative earlier and acting more strategically. Second, I want to improve my planning by breaking complex work into smaller, more realistic steps. Third, I want to continue developing my technical understanding, especially where UX, front-end systems and AI-related workflows connect. Fourth, I want to keep improving how I translate research findings into clear and confident design decisions.
+
+Overall, I look back on this internship with gratitude and confidence. It was a demanding project, but it gave me the opportunity to grow as both a designer and a young professional. The supervisor feedback confirmed that I can contribute at a strong level in a real company setting, while my own reflection shows me clearly where I still want to improve. Because of that, I do not see this project only as the end of my studies, but also as the start of my next step as a UX/UI designer.
+
+
+
+7. Learning outcomes
+
+In this section I describe how my graduation project contributes to the four Bachelor learning outcomes. For each learning outcome I explain which activities and results from this project demonstrate my level and how these relate to the definitions used in the HBO‑ICT programme.
+
+7.1 Bachelor LO1 - Professional duties
+
+You create professional products at bachelor’s level within your IT subdomain, in line with the standards and working methods customary in the sector, and you act accordingly in relevant complex professional situations.
+
+In this project my IT subdomain is mainly UX/UI design and front‑end implementation within a custom CMS environment. The most visible professional products are the researched and implemented template system for campaign landing pages, the series of Figma prototypes (from low‑fidelity flows to high‑fidelity designs linked to Delta’s design system), and the working CMS implementation including reusable components and configuration flows. In addition, I produced professional documentation such as case study reports, requirements lists, design rationales, usability test plans and reports, and implementation notes.
+
+Acting at bachelor’s level means being able to operate in unfamiliar, changing situations and to make substantiated choices based on integrated knowledge. I had to design and implement a solution within an existing, complex CMS that I did not know beforehand, while working with different stakeholders (campaign marketers, product stakeholders, developers) who each had their own priorities. I integrated knowledge from UX research, interaction design, front‑end development and applied research methodology, and I used this to make trade‑offs, for example between flexibility for marketers and maintainability for developers, or between ideal UX patterns and technical constraints in the CMS.
+
+Throughout the project I aligned my work with relevant standards and working methods in the UX and front‑end field. For example, I applied recognised usability heuristics and design principles in the heuristic evaluation, used component‑based design and consistent layout rules in the prototypes, followed responsive design and accessibility considerations, and worked with a design system approach rather than one‑off page designs. In the CMS implementation I respected existing coding conventions and architectural decisions, and coordinated with the front‑end developer to ensure that my changes were maintainable.
+
+The project context was a complex professional situation: there were multiple stakeholders, dependencies on the CMS platform, time constraints, and evolving expectations as new insights emerged from research and testing. I had to exercise professional judgement when scope and priorities needed to be adjusted, for instance when I shifted the focus from applying the system to a single June campaign page towards refining the template system into a reusable product for multiple campaigns. Taken together, the professional products I delivered and the way I navigated this environment show that I can act at the intended bachelor level within my subdomain.
+
+7.2 Bachelor LO2 - Situation‑orientation
+
+You apply your knowledge and skills in an authentic professional context, where your activities and choices are aligned with the needs, processes and standards of the organisation and lead to demonstrable value for stakeholders.
+
+The project took place in an authentic professional context: Delta Electronics EMEA, within the digital and marketing departments that are responsible for real campaigns and real landing pages. From the start I embedded my activities in the existing workflows and processes instead of working in isolation. The Empathize phase was explicitly focused on understanding how requests, briefings, designs and CMS configuration currently flow through the organisation, and which pain points people experience in daily practice.
+
+I aligned my choices with organisational needs and standards in several ways. In the Define phase I translated the findings into requirements that were validated with stakeholders, using MoSCoW to reach realistic decisions about what the first version of the template system must deliver. In Ideate and Prototype I constantly checked whether concepts and designs fitted the existing CMS architecture, Delta’s visual identity and the way the digital team prefers to work. When technical constraints appeared, I adapted my design and implementation so that the solution remained usable within Delta’s environment rather than insisting on a theoretically perfect but impractical design.
+
+The project also delivers demonstrable value for stakeholders. For marketers, the new template system provides a clearer structure for page creation, reusable components and a more guided configuration flow, which reduces their dependency on developers and makes the process more predictable. For the digital/front‑end team, the system reduces the number of one‑off fixes and ad‑hoc layouts, and offers a more maintainable basis for future campaigns. This value is not only assumed, but supported by the usability tests and consolidated feedback from nine participants, who highlighted improvements in ease of use, structure and understanding of the new system compared to the old workflow. Finally, for internal decision‑makers and future developers, the documentation and recommendations create a clearer roadmap for further development of the CMS and potential AI support.
+
+7.3 Bachelor LO3 - Professional standard
+
+You take responsibility when solving an ICT issue. You define and carry out your research using relevant selected methodologies, and provide advice to your stakeholders even in complex and uncertain contexts. You substantiate and validate future‑oriented choices by use of ethical, intercultural and sustainable arguments.
+
+The central ICT issue in this project was the inefficient, inconsistent and developer‑dependent process for creating campaign landing pages in the custom CMS. This problem had multiple causes (template design, CMS configuration options, collaboration patterns, documentation) and several possible directions for solutions. I took responsibility for clarifying this issue by formulating a clear main research question and six sub‑questions, and by choosing appropriate HBO‑ICT research methods for each of them.
+
+Methodologically, I combined qualitative and quantitative approaches: case studies of existing pages, semi‑structured interviews, observations, a satisfaction survey, heuristic evaluation, benchmarking, prototype‑based usability tests and a consolidated analysis of test results. I documented my choices and reasoning in the reading guide and related reports, and used the results to substantiate design and implementation decisions. This demonstrates that I can design and conduct applied research in a structured and context‑appropriate way.
+
+Based on the research outcomes I provided advice at different moments and levels. During the project I advised stakeholders on which template concept to choose, which requirements could realistically be included in the first version, and how AI support should be treated - as a future option rather than a core dependency. In the conclusion and recommendations I provided more formal advice on how the template system can be extended, how documentation and onboarding can be improved, and how Delta might explore AI support in a controlled way.
+
+I also reflected on ethical, intercultural and sustainable aspects where relevant. For example, I considered accessibility and inclusivity in the design of components and page layouts, because landing pages are used across different markets and user groups in the EMEA region. In thinking about AI support I took into account issues such as data quality, privacy and the risk of over‑automating decisions that should remain with human marketers. From a sustainability perspective, I aimed to reduce unnecessary rework and one‑off implementations by promoting reuse of templates and components, which supports more efficient long‑term maintenance of the CMS. These reflections informed my choices and are visible in the way I scoped and justified both the implemented system and the proposed future directions.
+
+7.4 Bachelor LO4 - Personal leadership
+
+You independently formulate goals and actions that demonstrate leadership in your own long‑term development as an ICT professional. You show that you are capable of carrying out these actions and achieving your goals, adjusting them as necessary.
+
+At the start of the graduation project I formulated personal goals that go beyond this single assignment: strengthening my research skills, improving my ability to design systems (not just screens), gaining experience in working with a custom CMS in a real company, and learning to better manage scope and expectations with multiple stakeholders. I translated these goals into concrete actions, such as planning enough time for Empathize and Define instead of jumping directly into design, setting up a Kanban‑based workflow, and actively seeking feedback from both my company mentor and Fontys coach at key moments.
+
+Throughout the project I showed leadership by independently organising my work and by taking initiative when issues arose. For instance, I proposed the series of case studies and interviews to get a better picture of the existing situation, planned and executed the usability tests, and initiated discussions when scope adjustments were needed after new findings. I did not wait passively for instructions, but suggested options and trade‑offs, and then acted on the agreed direction.
+
+Reflection and adjustment are a recurring part of my approach. The midterm session with my supervisor was a key moment where I evaluated progress, risks and alignment with expectations, and used that input to sharpen the focus for the second half of the project. I also reflected on my own learning - what went well, where I needed to improve, and how I could work more effectively in the team context. When it became clear that focusing too narrowly on a single June campaign page would not make full use of the potential impact of the project, I helped to reframe the scope towards refining the template system as a reusable product, which better supports both the company and my learning goals.
+
+By the end of the project I can see concrete growth in how I plan my work, communicate with stakeholders, justify my decisions and combine research and design in a structured way. I have not only delivered a professional product, but also taken deliberate steps in my development as an ICT professional, and I have shown that I can adjust my goals and actions when new insights or circumstances require it.
